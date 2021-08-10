@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--BEGIN 打赏-->
+<div class="js_dialog" id="J_Dialog_dashang" style="display: none;">
+    <!--<div class="weui-mask"></div>-->
+    <div class="weui-dialog">
+        <i class="weui-xclose"></i>
+        <div class="weui-dialog__bd">
+            <!-- //打赏模板区-->
+            <div class="ws__popup-template">
+                <h2 class="hdTit">为喜欢的节目打赏</h2>
+                <div class="item flexbox">
+                    <input class="ipt-txt align-l flex1" type="text" name="dschooseProgram" placeholder="选择打赏节目" readonly />
+                </div>
+                <div class="item item-area">
+                    <textarea class="describe" name="content" placeholder="输入打赏语，30字以内（选填）"></textarea>
+                </div>
+                <div class="item item-gift" id="J__chooseGift">
+                    <div class="gift flexbox selected" data-gift="001">
+                        <label class="txt"><span>豪车</span><em class="time">霸屏50秒</em></label>
+                        <span class="amount">￥<em>12</em> <i class="chkbox"></i></span>
+                    </div>
+                    <div class="gift flexbox" data-gift="002">
+                        <label class="txt"><span>动人玫瑰</span><em class="time">霸屏20秒</em></label>
+                        <span class="amount">￥<em>8</em> <i class="chkbox"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weui-dialog__ft">
+            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" style="background: #ff4400; border-radius: 4px; color: #fff;">支付 <span>￥<em class="moneyNum">12</em></span> 打赏</a>
+        </div>
+    </div>
+</div>
+<!--END 打赏-->
+</body>
+</html>
