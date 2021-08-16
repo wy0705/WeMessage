@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 100px;	
+}
+div{
+    box-sizing: border-box;
+}
+body,a{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    outline: none;
+    font-size: 0.12rem;
+}
+body{
+    background: rgb(240,240,240);
+}
+
+
+
+.name {
+    font-size: 20px;
+    font-family: "微软雅黑";
+    font-weight: 700;
+    color:black;
+    background: linear-gradient(to right, #67e734, #78dcd4);
+}
+
+/* 图片小园 */
+.header img {
+    margin: 1px 1px;
+    float: left;
+    height: 30px;
+    width: 30px;
+    /* border: 1px solid orangered; */
+    border-radius: 50%;
+}
+
+.header>.top{
+/* 顶栏固定  */
+    position: fixed; 
+    left:5;
+    top:0;
+    z-index: 10;
+    height: 0.44rem;
+    background: #eef1f1;
+    font-size: 0.14rem;
+    color:white;
+    width: 100%;
+    text-align: center;
+    /* padding-left: 0.17rem; */
+    /* padding-right: 0.17rem; */
+    line-height: 0.44rem;
+}
+
+
+.footer{
+    position: fixed;
+    width: 100%;
+    left:0;
+    bottom: 0;
+    z-index: 5;
+    height: 0.48rem;
+    background: linear-gradient(to right, #67e734, #78dcd4);
+    display: flex;
+   flex-flow: row;
+   justify-content: space-around;
+   line-height: 0.24rem;
+}
+.footer>.option{
+    width: 25%;
+    text-align: center;
+}
+.footer{
+    color: white;
+}
+
+.footer .list{
+    margin-top: 13px;
+    font-size: 0.15rem;
+}
+.footer>.option:hover{
+    background: white;
+    color:  #26A69A;
+}

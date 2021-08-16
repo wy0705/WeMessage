@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 100px;	
+}
+div{
+    box-sizing: border-box;
+}
+body,a{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    outline: none;
+    font-size: 0.12rem;
+}
+body{
+    background: rgb(240,240,240);
+}
+
+
+
+.name {
+    font-size: 20px;
+    font-family: "微软雅黑";
+    font-weight: 700;
+    color:black;
+    background: skyblue;
+}
+
+/* 图片小园 */
+.header img {
+    /*
+    emem这个还实现不了在一行上mmp
+     display: inline-block;
+    vertical-align: middle;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; */
+    margin: 1px 1px;
+    float: left;
+    height: 30px;
+    width: 30px;
+    /* border: 1px solid orangered; */
+    border-radius: 50%;
+}
+
+.header>.top{
+/* 顶栏固定  */
+    position: fixed; 
+    left:5;
+    top:0;
+    z-index: 10;
+    height: 0.44rem;
+    background: #eef1f1;
+    font-size: 0.14rem;
+    color:white;
+    width: 100%;
+    text-align: center;
+    /* padding-left: 0.17rem; */
+    /* padding-right: 0.17rem; */
+    line-height: 0.44rem;
+}
+
+.header button {
+    margin-left: 5px; 
+    margin-right: 5px;
+    padding-left: 0.10rem;
+    padding-right: 0.10rem;
+    width:130px;
+    height:30px;
+    font-size:20px;
+    font-weight:700;
+    color: black;
+    /* background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);  linear-gradient渐变属性*/
+    border:0;
+    /* border-radius:15px; */
+}

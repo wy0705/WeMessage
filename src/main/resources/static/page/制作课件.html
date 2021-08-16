@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>制作课件</title>
+    <link rel="stylesheet" href="../css/制作课件.css">
+	<script src="../jquery.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="top">
+			<div class="name">
+				<div><a href="../page/my.html"><img src="../image/0022005542855596_b.jpg" alt=""></a></div>
+				<div>我的课件库</div>
+			</div>
+		</div>
+	</div>
+
+
+
+  <div class="page">
+    <div>
+      <div class="word1">上传ppt（pdf格式）</div>
+      <div class="textBox"></div>
+    </div>
+    <div class="">
+      <div class="word">
+        选择ppt播放时间点
+      </div>
+      <div class="textBox">
+
+      </div>
+      
+
+    </div>
+    <div class="">
+      <div class="word">
+        上传音频
+      </div>
+      <div class="textBox">
+        
+    </div>
+
+
+  </div>
+
+
+
+</body>
+</html>
+
+<script>
+	//    选择附件上传 
+	var fileUrl;  //需要的url，在保存时后台需要这个地址
+   var saveFileName;  //上传完成后截取的文件名
+   $('#file-input').change(function(){ 
+     //判断文件名是否为空，不为空时截取文件的名
+     if($(this).val() == ''){ 
+       return false; 
+     }else{
+         saveFileName=$(this).val().slice(12);
+         $(".enclosure-text").text(saveFileName);
+     }
+     $('#submitFile').ajaxSubmit({ 
+       type:'post', 
+       dataType:'json', 
+       success:function(result){ 
+         //请求成功后后台会返回一个URL 地址，该地址是你最后保存时需要提交给后台的。
+              fileUrl=result.url;
+         //并且清空原文件，不然选择相同文件不能再次传 
+//       $('#file-input').val(''); 
+       }, 
+       error:function(){ 
+         //并且清空原文件，不然选择相同文件不能再次传 
+//       $('#file-input').val(''); 
+       } 
+     }); 
+})
+</script>

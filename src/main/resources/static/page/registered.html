@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>  
+    <meta name="viewport" content=" initial-scale=1.0,user-scalable=no" />
+    <title>注册页面</title>
+	<link rel="stylesheet" href="../css/login.css">
+	<script src="login.js"></script> -->
+	<script type="text/javascript" src="jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div id="login-box">
+		<h1>WeMessage</h1>
+		<div class="form">
+			<div class="item">
+			   <i class="fa fa-github-alt" style="font-size:24px"></i>
+			   用户名：<input type="text" placeholder="Username">		   
+			</div>
+			<div class="item">
+			   <i class="fa fa-search" style="font-size:24px"></i>
+			   密码：<input type="password" placeholder="Password">	
+			   <div>
+				<form method="POST" action="#">
+					<button id="zc">注册</button>
+				</form> 
+			   </div>	
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
+
+<script>
+	    $("#zc").click(function () {
+        $.ajax({
+            url: "http://localhost:8080/page/registered.html",
+            method: "post",
+            data: {'username': $("#username").val(),
+                'password': $("#password").val()},
+            xhrFields: {
+                withCredentials: true //允许跨域带Cookie
+            },
+            success: function (result) {
+                window.location.href="../page/information.html";
+            },
+            error: function (result) {
+                alert(result.responseText)
+            }
+        })
+        window.location.href="../information.html";
+    });
+</script>

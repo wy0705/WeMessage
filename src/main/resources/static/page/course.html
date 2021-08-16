@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/course.css">
+</head>
+<body>
+
+	<div class="header">
+		<div class="top">
+			<div class="name">
+				<div><a href="../page/my.html"><img src="../image/0022005542855596_b.jpg" alt=""></a></div>
+				<div>我的课件库</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<ul>
+			<li></li>
+		</ul>
+	</div>
+
+
+
+
+
+
+
+	<div class="footer">
+		<div class="option">
+			 <div class="list"><a href="./information.html">消息</a></div>
+	   </div>
+		<div class="option">
+		   <div class="list"><a href="#">课程</a></div>
+	   </div>
+		<div class="option">
+		   <div class="list"><a href="./my.html">我的</a></div>
+	   </div>
+	 </div>
+
+
+
+<script>
+ 
+	autoSize();
+		 	 
+	window.onresize = function(){
+		 
+	autoSize();		 		 
+	}
+		 	 
+		 
+	function autoSize(){
+		 
+	// 获取当前浏览器的视窗宽度，放在w中
+		 
+	var w = document.documentElement.clientWidth;
+	 
+	// 计算实际html font-size大小
+	 
+	var size = w * 100 / 375 ;
+	 
+	// 获取当前页面中的html标签
+	 
+	var html = document.querySelector('html');
+	 
+	// 设置字体大小样式
+	 
+	html.style.fontSize = size + 'px';
+
+		}
+		 
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/my.css">
+</head>
+<body>
+    <div class="content">
+        <div class="username">
+            <img src="../image/0 (10).webp" alt="" />
+            <div class="text">
+            <div class="name">饭醉团伙</div>
+            <div class="haha"><a href="./personal.html">编辑资料</a></div>
+           </div>
+       </div>
+   </div>
+    
+   
+   <div class="shezhi">
+   我的课件库 
+   <a href="./我的课件库.html"> > </a> 
+   </div>
+    
+   <div class="secrt"> 
+   制作课件
+   <a href="./制作课件.html"> > </a>
+   </div>
+    
+    
+   <div class="other">
+   设置
+   <a href=""> > </a>
+   </div>
+
+    
+    <!-- 底边栏 -->
+	<div class="footer">
+        <div class="option">
+             <div class="list"><a href="./information.html">消息</a></div>
+       </div>
+        <div class="option">
+           <div class="list"><a href="./course.html">课程</a></div>
+       </div>
+        <div class="option">
+           <div class="list"><a href="#">我的</a></div>
+       </div>
+     </div>
+ 
+<script>
+ 
+ 
+ 
+ 
+autoSize();
+ 
+ 
+ 
+window.onresize = function(){
+ 
+autoSize();
+ 
+   
+ 
+}
+ 
+ 
+ 
+function autoSize(){
+ 
+// 获取当前浏览器的视窗宽度，放在w中
+ 
+var w = document.documentElement.clientWidth;
+ 
+// 计算实际html font-size大小
+ 
+var size = w * 100 / 375 ;
+ 
+// 获取当前页面中的html标签
+ 
+var html = document.querySelector('html');
+ 
+// 设置字体大小样式
+ 
+html.style.fontSize = size + 'px';
+ 
+}
+ 
+</script>
+
+</body>
+</html>

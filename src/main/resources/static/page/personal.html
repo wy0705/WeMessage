@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+ 
+<html lang="zh">
+ 
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Document</title> 
+<link rel="stylesheet" href="../css/personal.css">
+</head>
+ 
+<body> 
+<div class="box">
+    <div class="header"> 
+        <div class="top">
+            <div><a href="../page/my.html"> <img src="../image/0022005542855596_b.jpg" alt="" > </a></div>
+            <div class="name">个人信息</div>
+           
+        </div>
+
+    </div>
+    <!-- -------------------- -->
+    <div class="footer">
+        <form action="" method="POST" name="修改后的个人信息" id="msg">
+            <div class="img">
+                <img src="../image/1503419577248.jpg" alt="" id="my-img">
+                <input class="touxiang" type="file" id="img-upload" accept=".jpg,.webp,.png,.jpeg"> 
+            </div> 
+           
+            <div class="msg">
+               <div class="xm">  <span style="font-weight: 700;">姓名：</span><input type="text" name="username" ></div>
+               <div class="age"> <span style="font-weight: 700;">年龄：</span><input type="text" name="userage" > </div> 
+               <div class="xb">  
+                   <span style="font-weight: 700;">性别：</span>
+                   <lable for="sex">
+                       <span class="nan">男</span>
+                    </lable> 
+                    <input type="radio" name="sex" id="sex"> 
+                     <label for="sex">
+                        <span class="nv">女</span>
+                    </label> <input type="radio" name="sex" id="sex"></div>
+                    <input  class="bc" type="submit" value="保存">
+            </div>
+        </form>
+    </div>
+
+</div> 
+ 
+</body>
+ 
+</html>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+    $("#msg").click(function () {
+        $.ajax({
+            url: "http://localhost:8080/page/my.html",
+            method: "post",
+            data: {
+                'xm': $("#xm").val(),
+                'age': $("#age").val(),
+                'xb': $("#xb").val(),
+            },
+            xhrFields: {
+                withCredentials: true //允许跨域带Cookie
+            },
+            success: function (result) {
+                window.location.href="../page/my.html";
+            },
+            error: function (result) {
+                alert(result.responseText)
+            }
+        })
+    });
+    $(".avatar").click(function(){
+    $("#img-upload").trigger("click")
+})
+</script>

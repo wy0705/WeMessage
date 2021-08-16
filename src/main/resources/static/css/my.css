@@ -1,0 +1,107 @@
+html{
+    font-size:50px;
+}
+     
+body{
+    background: rgb(239,239,239);     
+}
+
+body,a{ 
+    padding:0;  
+    margin:0;    
+    text-decoration: none;
+}
+
+.username{
+        height: 0.72rem;        
+        background: white;         
+        border-bottom: 1px solid #E0E0E0 ;        
+        padding-left: 0.17rem;        
+        padding-right: 0.12rem;        
+        padding-top: .12rem;        
+}
+         
+.username>img{       
+        width: 0.48rem;        
+        height: 0.48rem;        
+        object-fit: cover;         
+        margin-right: 0.12rem;       
+        float: left;         
+        border-radius: 0.1rem;         
+}
+
+.username>.text{    
+    height: 0.48rem;    
+    float: left;    
+}
+     
+.username .name{ 
+    float: left;
+    font-size: 0.3rem;   
+    margin-bottom: 0.08rem;  
+     
+}
+     
+.username .haha{ 
+    float: right;
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 0.2rem;   
+    color: #5D5D5D;   
+}
+
+.address,.safe,.shezhi,.secrt,.other{
+     
+    font-size: 0.14rem;
+         
+    padding-left: 0.17rem;
+         
+    border-bottom: 1px solid #E0E0E0 ;
+         
+    height: 0.65rem;
+         
+    line-height: 0.65rem;
+         
+    padding-right: 0.12rem;
+         
+    background: white;
+         
+}
+.address>a,.safe>a,.shezhi>a,.secrt>a,.other>a{
+     
+    float: right;  
+}
+
+.footer{
+    position: fixed;
+    width: 100%;
+    left:0;
+    bottom: 0;
+    z-index: 5;
+    height: 0.48rem;
+    background: linear-gradient(to right, #67e734, #78dcd4);
+   display: flex;
+   flex-flow: row;
+   justify-content: space-around;
+   line-height: 0.24rem;
+}
+.footer>.option{
+    width: 25%;
+    text-align: center;
+}
+.content{
+   margin-bottom: 0.5rem;
+}
+.footer{
+   color: white;
+}
+
+.footer .list{
+    margin-top: 13px;
+    font-size: 0.15rem;
+}
+.footer>.option:hover{
+   background: white;
+   color:  #26A69A;
+}
