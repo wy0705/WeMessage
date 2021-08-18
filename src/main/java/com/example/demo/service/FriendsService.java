@@ -5,7 +5,7 @@ import com.example.demo.entity.Friends;
 import java.util.List;
 
 public interface FriendsService {
-    int deleteFriends(String fid);
+    int deleteFriends(int fid);
     int insertFriend(Friends friends);
-    List<String> selectFriendByIUid(String uid);
+    List<Integer> selectFriendByIUid(int uid);
 }

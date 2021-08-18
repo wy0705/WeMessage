@@ -13,7 +13,7 @@ public class MessageServiceImpl implements MessageService {
     private MessageDao messageDao;
 
     @Override
-    public int deleteMessage(String mid) {
+    public int deleteMessage(int mid) {
         return messageDao.deleteMessage(mid);
     }
 
@@ -23,7 +23,7 @@ public class MessageServiceImpl implements MessageService {
     }
 
     @Override
-    public List<String> selectMessageByfid(String fid) {
+    public List<Integer> selectMessageByfid(int fid) {
         return messageDao.selectMessageByfid(fid);
     }
 }

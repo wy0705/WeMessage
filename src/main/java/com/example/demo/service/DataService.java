@@ -5,8 +5,8 @@ import com.example.demo.entity.User;
 import com.example.demo.entity.UserData;
 
 public interface DataService {
-    int deletedata(UserData data);
+    int deletedata(int did);
     int insertdata(UserData data);
-    UserData selectBydid(String did);
+    UserData selectBydid(int did);
     boolean updatedataz(UserData data);
 }

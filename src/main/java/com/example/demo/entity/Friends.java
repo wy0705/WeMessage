@@ -2,12 +2,11 @@ package com.example.demo.entity;
 
 
 public class Friends {
-    String fid;
-    String uid;
-    String _uid;
+    private int fid;
+    private int uid;
+    private int _uid;
 
-    public Friends(String fid, String uid, String _uid) {
-        this.fid = fid;
+    public Friends(int uid, int _uid) {
         this.uid = uid;
         this._uid = _uid;
     }
@@ -15,27 +14,27 @@ public class Friends {
     public Friends() {
     }
 
-    public String getFid() {
+    public int getFid() {
         return fid;
     }
 
-    public String getUid() {
-        return uid;
-    }
-
-    public String get_uid() {
-        return _uid;
-    }
-
-    public void setFid(String fid) {
+    public void setFid(int fid) {
         this.fid = fid;
     }
 
-    public void setUid(String uid) {
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
         this.uid = uid;
     }
 
-    public void set_uid(String _uid) {
+    public int get_uid() {
+        return _uid;
+    }
+
+    public void set_uid(int _uid) {
         this._uid = _uid;
     }
 }

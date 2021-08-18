@@ -15,21 +15,21 @@ public class DataController {
 
     @PostMapping(value = "/addData")
     @ResponseBody
-    public String addData(String did,int age,String gender){
-        dataservice.insertdata(new UserData(did,age,gender));
+    public String addData(int age,String gender){
+        dataservice.insertdata(new UserData(age,gender));
         return "该资料已添加";
     }
 
     @PostMapping(value = "/selectData")
     @ResponseBody
-    public UserData selectData(String did){
+    public UserData selectData(int did){
             return dataservice.selectBydid(did);
     }
 
     @PostMapping(value = "/updateData")
     @ResponseBody
     public String updateData(String did,int age,String gender){
-        if (dataservice.updatedataz(new UserData(did,age,gender))){
+        if (dataservice.updatedataz(new UserData(age,gender))){
             return "已更新";
         }
         return "不存在用户无法更新";

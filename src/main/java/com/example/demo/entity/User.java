@@ -3,52 +3,49 @@ package com.example.demo.entity;
 
 
 
-/**
- * @author lqc
- */
+
 public class User {
 
-    String uid;
-    String name;
-    String did;
-    String password;
+    private int uid;
+    private String name;
+    private int did;
+    private String password;
 
-    public User(String uid, String name, String did, String password) {
-        this.uid = uid;
+    public User() {
+    }
+
+    public User(String name, int did, String password) {
         this.name = name;
         this.did = did;
         this.password = password;
     }
 
-    public User() {
+    public int getUid() {
+        return uid;
     }
 
-    public String getUid() {
-        return uid;
+    public void setUid(int uid) {
+        this.uid = uid;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getDid() {
-        return did;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setDid(String did) {
+    public int getDid() {
+        return did;
+    }
+
+    public void setDid(int did) {
         this.did = did;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void setPassword(String password) {

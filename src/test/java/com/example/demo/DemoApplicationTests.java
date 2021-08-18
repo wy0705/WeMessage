@@ -36,13 +36,13 @@ class DemoApplicationTests {
 
     @Test
     public void test() throws Exception {
-        userService.insertUser(new User("asf","jdfsa","sadffd","jajdhsf"));
+        userService.insertUser(new User("jdfsa",1,"jajdhsf"));
         userService.register("asf");
         userService.findUserByNameAndPassword("jdfsa","jajdhsf");
-        userService.selectByuid("asf");
-        userService.deleteUser("asf");
+        userService.selectByuid(1);
+        //userService.deleteUser(1);
 
-        dataservice.insertdata(new UserData("asdf",11,"asfd"));
+       /* dataservice.insertdata(new UserData("asdf",11,"asfd"));
         dataservice.selectBydid("asdf");
         dataservice.updatedataz(new UserData("asdf",44,"rfvg"));
 
@@ -51,7 +51,7 @@ class DemoApplicationTests {
         friendsService.selectFriendByIUid("agfds");
 
         messageService.insertMessage(new Message("dfsa","dsaf","asdf",89,"asfd"));
-        messageService.selectMessageByfid("dsaf");
+        messageService.selectMessageByfid("dsaf");*/
 
     }
 

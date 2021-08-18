@@ -16,7 +16,7 @@ public class MessageDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public int deleteMessage(String mid){
+    public int deleteMessage(int mid){
         return jdbcTemplate.update("delete from message where mid=?",mid);
     }
 
@@ -24,13 +24,13 @@ public class MessageDao {
         return jdbcTemplate.update("insert into message(mid,fid,content,timestamps,renamee)values (?,?,?,?,?)",message.getMid(),message.getFid(),message.getContent(),message.getTimestamps(),message.getRenamee());
     }
 
-    public List<String> selectMessageByfid(String fid){
-        final List<String> mmlist=new ArrayList<>();
+    public List<Integer> selectMessageByfid(int fid){
+        final List<Integer> mmlist=new ArrayList<>();
         String sql= "SELECT mid FROM message WHERE fid=?";
         jdbcTemplate.query(sql, new Object[]{fid}, new RowCallbackHandler() {
             @Override
             public void processRow(ResultSet rs) throws SQLException {
-                mmlist.add(rs.getString(1));
+                mmlist.add(rs.getInt(1));
             }
         });
         return mmlist;

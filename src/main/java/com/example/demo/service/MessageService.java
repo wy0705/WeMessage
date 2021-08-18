@@ -5,8 +5,8 @@ import com.example.demo.entity.Message;
 import java.util.List;
 
 public interface MessageService {
-    int deleteMessage(String mid);
+    int deleteMessage(int mid);
     int insertMessage(Message message);
-    List<String> selectMessageByfid(String fid);
+    List<Integer> selectMessageByfid(int fid);
 
 }

@@ -36,9 +36,9 @@ public class UserController {
 
     @PostMapping(value = "/register")
     @ResponseBody
-    public String register(String uid,String name,String did,String password){
+    public String register(int uid,String name,int did,String password){
         if (userService.selectByuid(uid)==null){
-            userService.insertUser(new User(uid,name,did,password));
+            userService.insertUser(new User(name,did,password));
             return "该注册成功";
         }
         return "该用户已存在，不能重复注册";
