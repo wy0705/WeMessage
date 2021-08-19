@@ -17,8 +17,8 @@ public class FriendController {
 
     @PostMapping(value = "/addFriends")
     @ResponseBody
-    public String addFriends(String fid,String uid,String _fid){
-        if (friendsService.insertFriend(new Friends(fid,uid,_fid))!=0){
+    public String addFriends(int uid,int _fid){
+        if (friendsService.insertFriend(new Friends(uid,_fid))!=0){
             return "该用户已添加";
         }
         return "添加失败";
@@ -27,13 +27,13 @@ public class FriendController {
 
     @PostMapping(value = "/selectFriends")
     @ResponseBody
-    public List<String> selectFriends(String uid){
+    public List<Integer> selectFriends(int uid){
         return friendsService.selectFriendByIUid(uid);
     }
 
     @PostMapping(value = "/deleteFriends")
     @ResponseBody
-    public String deleteFriends(String fid){
+    public String deleteFriends(int fid){
         if (friendsService.deleteFriends(fid)!=0){
             return "删除成功";
         }

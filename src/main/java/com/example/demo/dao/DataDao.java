@@ -11,21 +11,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @Component
-public class dataDao {
+public class DataDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public int deleteData(UserData data){
-        return jdbcTemplate.update("delete from data where did=?",data.getDid());
+    public int deleteData(int did){
+        return jdbcTemplate.update("delete from data where did=?",did);
     }
 
-    public UserData selectBydid(String did){
+    public UserData selectBydid(int did){
         final UserData data=new UserData();
         String sql= "SELECT * FROM data WHERE did=?";
         jdbcTemplate.query(sql, new Object[]{did}, new RowCallbackHandler() {
             @Override
             public void processRow(ResultSet rs) throws SQLException {
-                data.setDid(rs.getString(1));
+                data.setDid(rs.getInt(1));
                 data.setAge(rs.getInt(2));
                 data.setGender(rs.getString(3));
             }

@@ -20,17 +20,17 @@ public class FriendsDao {
         return jdbcTemplate.update("insert into friends(fid,uid,_uid)values (?,?,?)",friends.getFid(),friends.getUid(),friends.get_uid());
     }
 
-    public int deleteFriends(String fid){
+    public int deleteFriends(int fid){
         return jdbcTemplate.update("delete from friends where fid=?",fid);
     }
 
-    public List<String> selectFriendByUid(String uid){
-        final List<String> fflist=new ArrayList<>();
+    public List<Integer> selectFriendByUid(int uid){
+        final List<Integer> fflist=new ArrayList<>();
         String sql= "SELECT mid FROM message WHERE fid=?";
         jdbcTemplate.query(sql, new Object[]{uid}, new RowCallbackHandler() {
             @Override
             public void processRow(ResultSet rs) throws SQLException {
-                fflist.add(rs.getString(1));
+                fflist.add(rs.getInt(1));
             }
         });
         return fflist;

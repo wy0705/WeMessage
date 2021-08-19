@@ -14,7 +14,7 @@ public class FriendsServiceImpl implements FriendsService {
 
 
     @Override
-    public int deleteFriends(String fid) {
+    public int deleteFriends(int fid) {
         return friendsDao.deleteFriends(fid);
     }
 
@@ -24,7 +24,7 @@ public class FriendsServiceImpl implements FriendsService {
     }
 
     @Override
-    public List<String> selectFriendByIUid(String uid) {
+    public List<Integer> selectFriendByIUid(int uid) {
         return friendsDao.selectFriendByUid(uid);
     }
 

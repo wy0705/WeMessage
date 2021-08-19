@@ -1,8 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.dao.UserDao;
-import com.example.demo.dao.dataDao;
-import com.example.demo.entity.User;
+import com.example.demo.dao.DataDao;
 import com.example.demo.entity.UserData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,11 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class DataserviceImpl implements DataService {
     @Autowired
-    private dataDao dataDao;
+    private DataDao dataDao;
 
     @Override
-    public int deletedata(UserData data) {
-        return dataDao.deleteData(data);
+    public int deletedata(int did) {
+        return dataDao.deleteData(did);
     }
 
     @Override
@@ -23,7 +21,7 @@ public class DataserviceImpl implements DataService {
     }
 
     @Override
-    public UserData selectBydid(String did) {
+    public UserData selectBydid(int did) {
         return dataDao.selectBydid(did);
     }
 

@@ -18,8 +18,8 @@ public class MessageController {
 
     @PostMapping(value = "/addMessage")
     @ResponseBody
-    public String addMessage(String mid,String fid,String content,long timestamps,String renamee){
-        if (messageService.insertMessage(new Message(mid,fid,content,timestamps,renamee))!=0){
+    public String addMessage(int fid,String content,long timestamps,String renamee){
+        if (messageService.insertMessage(new Message(fid,content,timestamps,renamee))!=0){
             return "已添加";
         }
 
@@ -29,14 +29,14 @@ public class MessageController {
 
     @PostMapping(value = "/findMessage")
     @ResponseBody
-    public List<String> seletedMessage(String fid){
+    public List<Integer> seletedMessage(int fid){
         return messageService.selectMessageByfid(fid);
     }
 
 
     @PostMapping(value = "/deleteMessage")
     @ResponseBody
-    public String deleteMessage(String mid){
+    public String deleteMessage(int mid){
         if (messageService.deleteMessage(mid)!=0){
             return "删除成功";
         }
